@@ -4,14 +4,15 @@ export const siteConfig = {
   description:
     "Legal WatchDog helps enterprise legal, compliance, and operations teams monitor regulatory sources, detect changes, summarize impact, and assign response work.",
   nav: [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
     { label: "Features", href: "/features" },
     { label: "Industries", href: "/industries" },
-    { label: "Pricing", href: "/pricing" },
-    { label: "Security", href: "/security" },
-    { label: "Use Cases", href: "/use-cases" },
     { label: "Resources", href: "/resources" },
+    { label: "Pricing", href: "/pricing" },
+    { label: "Security", href: "/security" }
+  ],
+  secondaryNav: [
+    { label: "Use Cases", href: "/use-cases" },
+    { label: "Checklist", href: "/compliance-monitoring-checklist" },
     { label: "Contact", href: "/contact" }
   ]
 };

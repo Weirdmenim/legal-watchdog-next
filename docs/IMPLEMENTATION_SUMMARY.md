@@ -1,21 +1,25 @@
-# Legal WatchDog v5 Implementation Summary
+# Legal WatchDog v6 Implementation Summary
 
-## Main improvements
+## Version direction
+v6 is the quieter executive-clean version of the Legal WatchDog website. The goal was to reduce cognitive load without breaking the working Next.js implementation.
 
-- Upgraded site typography direction to IBM Plex Sans for a more mature enterprise SaaS feel.
-- Improved body, muted, card, link, dark-section, and form text colors for better readability.
-- Added realistic product mockup components for source monitoring, AI summaries, ticket workflow, audit trail, jurisdiction coverage, and command centre preview.
-- Added a dedicated `/security` page for enterprise trust, access control, audit trail, AI boundaries, and source reliability concerns.
-- Improved the homepage hero and added stronger product preview sections.
-- Improved feature landing pages with product mockups, buyer use cases, trust boundaries, FAQs, and CTAs.
-- Improved industry landing pages with risks reduced, source types, teams involved, workflows, related capabilities, and CTAs.
-- Improved Open Graph/social preview metadata with a generated OG SVG asset.
-- Updated sitemap and smoke tests to include the security page and new product components.
+## Naming preserved
+- Project folder: `legal-watchdog-next`
+- Package name: `legal-watchdog-next`
+- Core public routes remain available.
+- `/case-studies` continues to redirect to `/use-cases`.
 
-## Safety notes
-
-The upgrade keeps the existing Next.js App Router structure and does not remove working core routes. `/case-studies` remains a redirect to `/use-cases` so old links do not break.
-
-## MVP boundary preserved
-
-The copy still avoids claiming that Legal WatchDog gives legal advice, replaces legal professionals, has a native mobile app, or has fake customer proof.
+## Main changes
+- Homepage was shortened into a focused buyer journey:
+  1. Hero
+  2. Trust signals
+  3. Problem
+  4. Product workflow
+  5. Command centre preview
+  6. Who it helps
+  7. Enterprise trust
+  8. Demo CTA
+- Heavy homepage sections were moved to deeper pages rather than removed.
+- Top navigation was simplified.
+- Styling was tuned for calmer visual hierarchy and reduced noise.
+- Existing feature, industry, pricing, security, resources, use cases, checklist, contact, sitemap, robots, and API routes were preserved.

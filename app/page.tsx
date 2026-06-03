@@ -1,206 +1,145 @@
-import Link from "next/link";
 import { ButtonLink } from "@/components/ButtonLink";
 import { CTASection } from "@/components/CTASection";
-import { FAQ } from "@/components/FAQ";
 import { HeroVisual } from "@/components/HeroVisual";
 import { JsonLd } from "@/components/JsonLd";
+import { ProductMockup } from "@/components/ProductMockup";
 import { SectionHeading } from "@/components/SectionHeading";
 import { TrustBar } from "@/components/TrustBar";
-import { ProductMockup } from "@/components/ProductMockup";
 import { TrustStack } from "@/components/TrustStack";
-import { industries, seo, useCases } from "@/data/site";
-import { faqSchema, organizationSchema, pageMetadata, softwareSchema } from "@/lib/utils";
+import { seo } from "@/data/site";
+import { organizationSchema, pageMetadata, softwareSchema } from "@/lib/utils";
 
 export const metadata = pageMetadata({ ...seo.home, path: "/" });
 
 const workflow = [
-  "Create a monitoring project",
-  "Add jurisdictions and trusted sources",
-  "Detect source changes",
-  "Review an AI-assisted summary",
-  "Assign owners and track resolution"
-];
-
-const coreWorkflows = [
   {
-    title: "Monitor trusted sources",
-    text: "Track official web pages, documents, and APIs by project, jurisdiction, and source owner.",
-    href: "/features/source-monitoring"
+    title: "Monitor sources",
+    text: "Keep official websites, documents, and APIs organized by project and jurisdiction."
   },
   {
-    title: "Detect what changed",
-    text: "Compare old and new source content so reviewers can see the update without rereading every source manually.",
-    href: "/features/change-detection"
+    title: "Detect changes",
+    text: "Compare updates against previous versions so teams can see what actually changed."
   },
   {
-    title: "Summarize impact",
-    text: "Use AI-assisted summaries and confidence signals to help qualified reviewers understand the change faster.",
-    href: "/features/ai-summaries"
+    title: "Review summary",
+    text: "Use AI-assisted summaries to understand impact faster, with human review still in control."
   },
   {
-    title: "Assign the response",
-    text: "Create tickets, add owners, invite specialists, track deadlines, and keep evidence in one place.",
-    href: "/features/compliance-ticketing"
+    title: "Assign response",
+    text: "Create tickets, add owners, invite specialists, and preserve the evidence trail."
   }
 ];
 
-const homeFaqs = [
+const audiences = [
   {
-    q: "Who is Legal WatchDog built for?",
-    a: "Legal WatchDog is built for enterprise and regulated organizations with complex compliance monitoring needs across sources, jurisdictions, and internal teams."
+    title: "Compliance managers",
+    text: "Replace manual checks with monitored sources, alert review, and accountable follow-up."
   },
   {
-    q: "Does the AI make legal decisions?",
-    a: "No. AI summaries help teams understand source changes faster, but final legal and compliance decisions remain with qualified professionals."
+    title: "Legal teams",
+    text: "Review source context, AI-assisted summaries, version history, and ticket decisions in one place."
   },
   {
-    q: "Can teams invite external specialists?",
-    a: "Yes. External specialists can be invited into specific tickets so they can review context and comment without full workspace access."
+    title: "Operations leads",
+    text: "See what changed, what action is needed, who owns it, and when it is due."
   },
   {
-    q: "What happens after a change is detected?",
-    a: "The update can be summarized, turned into a ticket, assigned to an owner, discussed with the right people, and tracked until resolution."
-  },
-  {
-    q: "Is this a web app or mobile app?",
-    a: "Legal WatchDog is currently positioned as a responsive web app, not a native mobile app."
+    title: "Enterprise leaders",
+    text: "Improve visibility into regulatory response work without relying on scattered email threads."
   }
 ];
 
 export default function HomePage() {
   return (
     <>
-      <JsonLd data={[organizationSchema(), softwareSchema(), faqSchema(homeFaqs)]} />
-      <section className="hero section-shell">
+      <JsonLd data={[organizationSchema(), softwareSchema()]} />
+      <section className="hero section-shell quiet-hero">
         <div className="hero-copy">
           <p className="eyebrow">Regulatory monitoring software for enterprise teams</p>
           <h1>Regulatory change monitoring for enterprise compliance teams.</h1>
           <p className="hero-text">
-            Monitor official sources, detect meaningful changes, review AI-assisted summaries, and assign the response before regulatory updates become operational risk.
+            Legal WatchDog monitors trusted sources, detects regulatory changes, summarizes impact, and turns each update into assigned response work.
           </p>
           <div className="hero-actions">
             <ButtonLink href="/contact" trackingId="home-hero-demo">Book a Demo</ButtonLink>
-            <ButtonLink href="/features" variant="secondary" trackingId="home-hero-features">See the Workflow</ButtonLink>
+            <ButtonLink href="/features" variant="secondary" trackingId="home-hero-features">See Product Workflow</ButtonLink>
           </div>
-          <p className="microcopy">Built for large teams managing multiple jurisdictions, source updates, reviewers, and audit evidence.</p>
+          <p className="microcopy">Built for teams managing jurisdictions, source updates, reviewers, and audit evidence.</p>
         </div>
         <HeroVisual />
       </section>
 
-      <section className="section-shell trust-section" aria-label="Trust signals">
+      <section className="section-shell trust-section quiet-trust" aria-label="Trust signals">
         <TrustBar />
       </section>
 
-      <section className="section-shell split-section">
+      <section className="section-shell split-section quiet-section">
         <div>
-          <p className="eyebrow">The risk</p>
-          <h2>Manual monitoring breaks when updates are scattered and ownership is unclear.</h2>
+          <p className="eyebrow">The problem</p>
+          <h2>Manual monitoring gets risky when sources, updates, and owners are scattered.</h2>
         </div>
-        <div className="stacked-copy">
-          <p>Important changes can sit inside official websites, PDFs, portals, emails, and team chats. When review depends on manual checks, teams lose time and context.</p>
-          <p>Legal WatchDog gives every detected update a source, summary, owner, status, and evidence trail.</p>
+        <div className="stacked-copy short-copy">
+          <p>Regulatory changes can appear across official websites, PDFs, portals, and guidance pages. When teams track them manually, important updates can be missed or reviewed too late.</p>
+          <p>Legal WatchDog gives every update a source, summary, owner, status, and evidence trail.</p>
         </div>
       </section>
 
-      <section className="section-shell light-panel">
+      <section className="section-shell light-panel quiet-panel">
         <SectionHeading
           eyebrow="Product workflow"
-          title="Monitor sources. Detect changes. Summarize impact. Assign the response."
-          text="A simple operating flow for teams that need to know what changed and what must happen next."
+          title="Monitor sources. Detect changes. Assign the response."
+          text="A simple operating flow for enterprise teams that need clarity before regulatory updates become risk."
           align="center"
         />
-        <div className="workflow-grid">
+        <div className="workflow-grid quiet-workflow-grid">
           {workflow.map((step, index) => (
-            <article key={step} className="workflow-step">
+            <article key={step.title} className="workflow-step quiet-step">
               <span>{index + 1}</span>
-              <h3>{step}</h3>
+              <h3>{step.title}</h3>
+              <p>{step.text}</p>
             </article>
           ))}
         </div>
       </section>
 
-
-      <section className="section-shell mockup-showcase">
-        <SectionHeading
-          eyebrow="Product preview"
-          title="Show every reviewer the source, summary, owner, and evidence trail."
-          text="The site now shows realistic product states instead of only explaining the platform in text."
-          align="center"
-        />
-        <div className="mockup-showcase-grid">
-          <ProductMockup variant="source" />
-          <ProductMockup variant="summary" />
-          <ProductMockup variant="tickets" />
+      <section className="section-shell split-section quiet-section">
+        <div>
+          <p className="eyebrow">Command centre</p>
+          <h2>One workspace for the source, summary, ticket, owner, and audit trail.</h2>
+          <div className="hero-actions compact-actions">
+            <ButtonLink href="/features" trackingId="home-command-features">Explore Features</ButtonLink>
+            <ButtonLink href="/security" variant="secondary" trackingId="home-command-security">Review Security</ButtonLink>
+          </div>
         </div>
+        <ProductMockup variant="overview" />
       </section>
 
       <section className="section-shell">
         <SectionHeading
-          eyebrow="Core workflows"
-          title="Everything points toward faster review and clearer accountability."
-          text="Each workflow supports the work buyers care about most: monitoring, detection, summary review, response ownership, and evidence."
+          eyebrow="Who it helps"
+          title="Built for the teams responsible for noticing, reviewing, and acting on change."
+          text="The homepage stays simple. Deeper details live on the feature, industry, security, and resource pages."
         />
-        <div className="card-grid four">
-          {coreWorkflows.map((item) => (
-            <article className="info-card" key={item.title}>
+        <div className="card-grid four calm-card-grid">
+          {audiences.map((item) => (
+            <article className="info-card calm-card" key={item.title}>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
-              <Link href={item.href}>Explore feature</Link>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="section-shell dark-panel">
-        <SectionHeading
-          eyebrow="Use cases"
-          title="Start with one high-risk monitoring workflow. Expand after the process is proven."
-          text="Legal WatchDog is useful where regulatory change creates operational work across legal, compliance, and business teams."
-        />
-        <div className="card-grid two">
-          {useCases.slice(0, 4).map((item) => (
-            <article className="dark-card" key={item.title}>
-              <p className="mini-label">{item.industry}</p>
-              <h3>{item.title}</h3>
-              <p>{item.challenge}</p>
-              <Link href={`/use-cases#${item.id}`}>View workflow</Link>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="section-shell split-section" id="security">
+      <section className="section-shell split-section quiet-section" id="security">
         <div>
           <p className="eyebrow">Enterprise trust</p>
-          <h2>Built around control, traceability, and human review.</h2>
+          <h2>AI supports review. It does not replace legal judgment.</h2>
+          <p className="section-support">Legal WatchDog is designed around role-based access, controlled specialist invites, audit logs, source evidence, and human review for important decisions.</p>
         </div>
         <TrustStack />
       </section>
 
-      <section className="section-shell light-panel">
-        <SectionHeading
-          eyebrow="Industries"
-          title="For organizations where a missed update can become serious risk."
-          text="Explore the sectors where regulatory monitoring, source evidence, and accountable response workflows matter most."
-          align="center"
-        />
-        <div className="card-grid four">
-          {industries.slice(0, 8).map((industry) => (
-            <article className="compact-card" key={industry.name}>
-              <h3>{industry.name}</h3>
-              <p>{industry.text}</p>
-              <Link href={industry.href}>View industry</Link>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="section-shell">
-        <SectionHeading eyebrow="FAQ" title="Questions enterprise buyers usually ask first." />
-        <FAQ items={homeFaqs} />
-      </section>
-
-      <CTASection title="Ready to turn regulatory updates into assigned response work?" text="Book a focused demo and walk through one monitoring workflow your team handles manually today." />
+      <CTASection title="Ready to turn regulatory updates into assigned response work?" text="Book a focused demo around one monitoring workflow your team handles manually today." />
     </>
   );
 }
