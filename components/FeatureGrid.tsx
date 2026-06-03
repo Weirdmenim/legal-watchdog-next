@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { features } from "@/data/site";
 
 export function FeatureGrid({ limit }: { limit?: number }) {
@@ -9,6 +10,7 @@ export function FeatureGrid({ limit }: { limit?: number }) {
           <span className="card-number">{String(index + 1).padStart(2, "0")}</span>
           <h3>{feature.title}</h3>
           <p>{feature.text}</p>
+          <Link href={feature.href}>View details</Link>
         </article>
       ))}
     </div>

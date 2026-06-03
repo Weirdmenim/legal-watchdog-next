@@ -3,7 +3,7 @@ import { CTASection } from "@/components/CTASection";
 import { InternalLinks } from "@/components/InternalLinks";
 import { JsonLd } from "@/components/JsonLd";
 import { SectionHeading } from "@/components/SectionHeading";
-import { industries, seo } from "@/data/site";
+import { industries, industryLandingPages, seo } from "@/data/site";
 import { breadcrumbSchema, pageMetadata } from "@/lib/utils";
 
 export const metadata = pageMetadata({ ...seo.industries, path: "/industries" });
@@ -14,20 +14,32 @@ export default function IndustriesPage() {
       <JsonLd data={breadcrumbSchema([{ label: "Home", href: "/" }, { label: "Industries", href: "/industries" }])} />
       <section className="page-hero section-shell">
         <p className="eyebrow">Industries served</p>
-        <h1>Regulatory monitoring for organizations where one missed update can become serious operational risk.</h1>
+        <h1>Regulatory monitoring for regulated industries.</h1>
         <p>
-          Legal WatchDog is designed for large, regulated organizations that manage many sources, jurisdictions, departments, and response owners.
+          Legal WatchDog is designed for large organizations that monitor official sources across jurisdictions, departments, reviewers, and operational teams.
         </p>
       </section>
 
       <section className="section-shell">
-        <SectionHeading eyebrow="Regulated sectors" title="Built for complex operating environments." text="Each industry card links to a related use case or resource so the site has stronger internal linking and clearer buyer paths." />
-        <div className="card-grid two">
+        <SectionHeading eyebrow="Priority sectors" title="Industry pages built around specific monitoring workflows." text="Each page explains common sources, teams involved, and the workflow Legal WatchDog should support." />
+        <div className="card-grid three">
+          {industryLandingPages.map((industry) => (
+            <article className="info-card" key={industry.slug}>
+              <h2><Link href={`/industries/${industry.slug}`}>{industry.title}</Link></h2>
+              <p>{industry.description}</p>
+              <Link href={`/industries/${industry.slug}`}>View industry workflow</Link>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-shell light-panel">
+        <SectionHeading eyebrow="Additional regulated sectors" title="The same workflow can support other complex operating environments." align="center" />
+        <div className="card-grid four">
           {industries.map((industry) => (
-            <article className="info-card" key={industry.name}>
-              <h2>{industry.name}</h2>
+            <article className="compact-card" key={industry.name}>
+              <h3>{industry.name}</h3>
               <p>{industry.text}</p>
-              <Link href={industry.href}>View related workflow</Link>
             </article>
           ))}
         </div>
@@ -36,8 +48,8 @@ export default function IndustriesPage() {
       <section className="section-shell dark-panel">
         <SectionHeading
           eyebrow="Why industry context matters"
-          title="The same update can create different obligations for legal, compliance, and operations teams."
-          text="A visa rule may affect customer guidance. An FDA notice may affect quality processes. A privacy update may affect contracts, product design, and data handling. Legal WatchDog keeps each workflow organized by project and jurisdiction."
+          title="The same update can create different work for legal, compliance, and operations teams."
+          text="A visa rule may affect customer guidance. An FDA notice may affect quality processes. A privacy update may affect contracts, product design, and data handling. Legal WatchDog keeps each workflow organized by project, jurisdiction, source, and owner."
         />
       </section>
 

@@ -1,0 +1,15 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" rx="0" fill="#061A2E"/>
+  <circle cx="1030" cy="90" r="260" fill="#0B6F68" opacity="0.35"/>
+  <circle cx="170" cy="540" r="240" fill="#22C7B8" opacity="0.16"/>
+  <rect x="720" y="112" width="360" height="320" rx="28" fill="#FFFFFF" opacity="0.08" stroke="#A8FFF3" stroke-opacity="0.24"/>
+  <rect x="754" y="154" width="280" height="26" rx="13" fill="#C8FFF2" opacity="0.7"/>
+  <rect x="754" y="214" width="250" height="18" rx="9" fill="#FFFFFF" opacity="0.45"/>
+  <rect x="754" y="258" width="295" height="18" rx="9" fill="#FFFFFF" opacity="0.32"/>
+  <rect x="754" y="302" width="210" height="18" rx="9" fill="#FFFFFF" opacity="0.32"/>
+  <rect x="754" y="360" width="160" height="42" rx="21" fill="#22C7B8" opacity="0.95"/>
+  <text x="96" y="150" fill="#C8FFF2" font-family="IBM Plex Sans, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="3">LEGAL WATCHDOG</text>
+  <text x="96" y="250" fill="#FFFFFF" font-family="IBM Plex Sans, Arial, sans-serif" font-size="66" font-weight="700">Regulatory monitoring</text>
+  <text x="96" y="326" fill="#FFFFFF" font-family="IBM Plex Sans, Arial, sans-serif" font-size="66" font-weight="700">for enterprise teams</text>
+  <text x="96" y="405" fill="#D8E8EC" font-family="IBM Plex Sans, Arial, sans-serif" font-size="30">Detect changes. Summarize impact. Assign response work.</text>
+</svg>

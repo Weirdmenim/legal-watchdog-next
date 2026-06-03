@@ -1,11 +1,12 @@
 import Link from "next/link";
 
 const links = [
-  { href: "/features#monitoring", label: "Source monitoring" },
-  { href: "/features#change-detection", label: "Change detection" },
-  { href: "/features#collaboration", label: "Ticket workflow" },
+  { href: "/features/source-monitoring", label: "Source monitoring" },
+  { href: "/features/change-detection", label: "Change detection" },
+  { href: "/features/compliance-ticketing", label: "Ticket workflow" },
   { href: "/industries", label: "Industries" },
-  { href: "/case-studies", label: "Use cases" },
+  { href: "/use-cases", label: "Use cases" },
+  { href: "/security", label: "Security" },
   { href: "/contact", label: "Book a demo" }
 ];
 

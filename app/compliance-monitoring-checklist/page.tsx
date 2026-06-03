@@ -36,7 +36,7 @@ export default function ChecklistPage() {
       ])} />
       <Breadcrumbs items={[{ label: "Compliance Monitoring Checklist" }]} />
       <section className="page-hero section-shell">
-        <p className="eyebrow">Lead magnet</p>
+        <p className="eyebrow">Planning checklist</p>
         <h1>Compliance Monitoring Checklist for enterprise teams.</h1>
         <p>
           Use this checklist to plan sources, jurisdictions, owners, escalation paths, and audit evidence before your next regulatory change lands.
@@ -45,7 +45,7 @@ export default function ChecklistPage() {
 
       <section className="section-shell split-section">
         <div>
-          <SectionHeading eyebrow="Download" title="Capture early-stage buyers with a useful planning resource." text="This page is built as a conversion path for visitors who are interested but not ready to book a demo yet." />
+          <SectionHeading eyebrow="Download" title="Plan your monitoring coverage before your next regulatory change lands." text="Use this resource to map sources, jurisdictions, reviewers, escalation paths, and audit evidence before evaluating monitoring software." />
           <div className="checklist-preview">
             {checklist.map((group) => (
               <article key={group.title}>

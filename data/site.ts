@@ -9,7 +9,8 @@ export const siteConfig = {
     { label: "Features", href: "/features" },
     { label: "Industries", href: "/industries" },
     { label: "Pricing", href: "/pricing" },
-    { label: "Case Studies", href: "/case-studies" },
+    { label: "Security", href: "/security" },
+    { label: "Use Cases", href: "/use-cases" },
     { label: "Resources", href: "/resources" },
     { label: "Contact", href: "/contact" }
   ]
@@ -17,9 +18,9 @@ export const siteConfig = {
 
 export const seo = {
   home: {
-    title: "AI Regulatory Monitoring Software for Enterprise Teams",
+    title: "Regulatory Monitoring Software for Enterprise Compliance Teams",
     description:
-      "Detect regulatory changes, summarize impact, create tickets, and coordinate compliance response across jurisdictions with Legal WatchDog.",
+      "Monitor trusted sources, detect regulatory changes, summarize impact, and assign response work across jurisdictions with Legal WatchDog.",
     keywords: ["AI regulatory monitoring software", "regulatory change management", "compliance monitoring platform"]
   },
   about: {
@@ -46,11 +47,18 @@ export const seo = {
       "Review Legal WatchDog pricing packages for enterprise teams based on projects, sources, jurisdictions, users, specialist access, API needs, and support.",
     keywords: ["regulatory monitoring pricing", "enterprise compliance software pricing"]
   },
-  caseStudies: {
-    title: "Regulatory Monitoring Use Cases and Case Study Templates",
+  useCasesPage: {
+    title: "Regulatory Monitoring Use Cases for Enterprise Teams",
     description:
-      "See how Legal WatchDog supports immigration monitoring, FDA update tracking, privacy law monitoring, and enterprise risk workflows.",
-    keywords: ["regulatory monitoring case studies", "compliance workflow examples"]
+      "Explore practical regulatory monitoring workflows for travel, healthcare, privacy, and enterprise risk teams.",
+    keywords: ["regulatory monitoring use cases", "compliance workflow examples"]
+  },
+
+  security: {
+    title: "Security and Trust for Enterprise Regulatory Monitoring",
+    description:
+      "Review Legal WatchDog security, access control, audit trail, AI review, source reliability, and enterprise trust principles.",
+    keywords: ["compliance software security", "regulatory monitoring audit trails", "enterprise compliance security"]
   },
   resources: {
     title: "Resources on Regulatory Monitoring and Compliance Operations",
@@ -76,52 +84,52 @@ export const features = [
   {
     title: "Project and jurisdiction management",
     text: "Create monitoring projects, assign jurisdictions and sub-jurisdictions, and keep complex regulatory areas organized by business need.",
-    href: "/features#project-jurisdiction"
+    href: "/features/source-monitoring"
   },
   {
     title: "Source discovery and source management",
     text: "Add URLs, documents, and APIs manually, or use AI-assisted suggestions to identify credible sources for a project.",
-    href: "/features#source-management"
+    href: "/features/source-monitoring"
   },
   {
     title: "Automatic and manual scraping",
     text: "Run scheduled checks in the background and trigger manual checks when teams need to confirm the latest source information.",
-    href: "/features#monitoring"
+    href: "/features/source-monitoring"
   },
   {
     title: "Change detection and revision history",
     text: "Compare old and new source content, preserve revision history, and give reviewers evidence for what changed.",
-    href: "/features#change-detection"
+    href: "/features/change-detection"
   },
   {
     title: "AI summaries with confidence scores",
     text: "Turn long or technical updates into clear summaries that help professionals review faster without replacing legal judgment.",
-    href: "/features#ai-summaries"
+    href: "/features/ai-summaries"
   },
   {
     title: "Ticketing and accountable response",
     text: "Create tickets automatically or manually, assign owners, track status, upload files, and keep decisions in one thread.",
-    href: "/features#collaboration"
+    href: "/features/compliance-ticketing"
   },
   {
     title: "Notifications and escalation rules",
     text: "Notify teams in-app and by email when revisions, assignments, overdue tickets, or high-priority updates need attention.",
-    href: "/features#notifications"
+    href: "/features/compliance-ticketing"
   },
   {
     title: "Controlled external specialist access",
     text: "Invite legal advisors or specialists to specific tickets without giving them unnecessary workspace access.",
-    href: "/features#specialist-access"
+    href: "/features/compliance-ticketing"
   },
   {
     title: "Team permissions and audit logs",
     text: "Manage users, roles, project-level permissions, and audit trails for actions that affect compliance review.",
-    href: "/features#security"
+    href: "/features/audit-trails"
   },
   {
     title: "API access for internal systems",
     text: "Pull project data, revision history, and monitoring results into internal dashboards and automation workflows.",
-    href: "/features#api"
+    href: "/features/audit-trails"
   }
 ];
 
@@ -168,22 +176,22 @@ export const industries = [
   {
     name: "Tourism and Travel",
     text: "Monitor visa, immigration, entry, customer guidance, and cross-border policy changes across priority destinations.",
-    href: "/case-studies#travel"
+    href: "/industries/travel-immigration-compliance"
   },
   {
     name: "Aviation",
     text: "Track operational rules, safety updates, airport guidance, fueling requirements, and government notices.",
-    href: "/case-studies#travel"
+    href: "/industries/travel-immigration-compliance"
   },
   {
     name: "Healthcare and Pharma",
     text: "Monitor FDA updates, recalls, GMP guidance, device classifications, and public health policy changes.",
-    href: "/case-studies#healthcare"
+    href: "/industries/healthcare-pharma-compliance"
   },
   {
     name: "Finance and Banking",
     text: "Track regulatory notices, risk guidance, compliance obligations, reporting rules, and multi-market updates.",
-    href: "/resources/multi-jurisdiction-compliance-monitoring-guide"
+    href: "/industries/finance-banking-compliance"
   },
   {
     name: "Insurance",
@@ -193,17 +201,17 @@ export const industries = [
   {
     name: "Technology and Privacy",
     text: "Monitor GDPR, CCPA, UK DPA, Singapore PDPA, AI data processing guidance, and privacy requirements.",
-    href: "/case-studies#privacy"
+    href: "/industries/technology-privacy-compliance"
   },
   {
     name: "Oil and Gas",
     text: "Keep legal, safety, operational, environmental, and contract-related regulatory changes in one workflow.",
-    href: "/case-studies#risk"
+    href: "/industries/oil-gas-compliance"
   },
   {
     name: "Logistics",
     text: "Watch customs, transport, port, safety, and cross-border operational policy updates.",
-    href: "/case-studies#risk"
+    href: "/industries/logistics-compliance"
   },
   {
     name: "Manufacturing",
@@ -219,7 +227,7 @@ export const useCases = [
     industry: "Tourism, travel, and aviation",
     challenge: "Visa policies and entry rules change across several countries, creating customer guidance and operational risk.",
     solution: "Monitor official sources across priority jurisdictions, detect changes, summarize impact, and assign customer guidance updates.",
-    result: "Placeholder result: fewer manual checks, faster customer guidance updates, and reduced missed-policy risk."
+    result: "Pilot outcome to measure: manual review hours, response speed, customer guidance update time, and missed-policy risk reduction."
   },
   {
     id: "healthcare",
@@ -227,7 +235,7 @@ export const useCases = [
     industry: "Healthcare and pharma",
     challenge: "Medical device guidance, recalls, GMP updates, and process requirements need fast review by compliance teams.",
     solution: "Track official FDA sources, detect revisions, summarize possible impact, and open review tickets for accountable follow-up.",
-    result: "Placeholder result: faster review cycle and better evidence for compliance follow-up."
+    result: "Pilot outcome to measure: review cycle time, compliance follow-up speed, and quality of audit evidence."
   },
   {
     id: "privacy",
@@ -235,7 +243,7 @@ export const useCases = [
     industry: "Technology and privacy",
     challenge: "Privacy obligations shift across GDPR, CCPA, UK DPA, Singapore PDPA, and AI-related guidance.",
     solution: "Map privacy jurisdictions, monitor official updates, and assign legal review tickets with source context.",
-    result: "Placeholder result: improved legal visibility and reduced external research load."
+    result: "Pilot outcome to measure: legal review visibility, external research load, and time from update detection to assigned action."
   },
   {
     id: "risk",
@@ -243,7 +251,7 @@ export const useCases = [
     industry: "Enterprise risk",
     challenge: "Contract obligations and regulatory conditions change across local, state, and international sources.",
     solution: "Group sources by project, detect revisions, and document decisions in ticket threads with owners and deadlines.",
-    result: "Placeholder result: stronger accountability and clearer audit evidence."
+    result: "Pilot outcome to measure: ownership clarity, ticket resolution time, and evidence quality for future reviews."
   }
 ];
 
@@ -305,20 +313,20 @@ export const resourcePosts: ResourcePost[] = [
     intent: "Educate compliance managers on moving from scattered research to structured monitoring.",
     audience: "Compliance managers and project owners",
     relatedFeature: "Source monitoring and revision history",
-    relatedFeatureHref: "/features#monitoring",
+    relatedFeatureHref: "/features/source-monitoring",
     summary: "A practical guide to source mapping, update detection, ticket ownership, and review discipline.",
     sections: [
       {
         heading: "Start with the sources that create real risk",
         body: [
-          "A useful monitoring workflow does not begin with every possible source. It begins with the sources your team already worries about missing. List the official websites, documents, notices, APIs, and guidance pages that affect your business decisions.",
-          "Group each source by project, jurisdiction, and business owner. This makes the workflow easier to review and easier to defend later."
+          "A useful monitoring workflow starts with the sources your team cannot afford to miss. List the official websites, documents, notices, APIs, and guidance pages that affect your business decisions.",
+          "Group each source by project, jurisdiction, and business owner. That structure makes the workflow easier to review and defend later."
         ]
       },
       {
         heading: "Turn each update into a review action",
         body: [
-          "A detected change is not enough. Someone must review the change, decide whether it matters, and assign the next action. That is why monitoring should connect directly to tickets, owners, due dates, and status tracking.",
+          "A detected change only reduces risk when someone reviews it, decides whether it matters, and assigns the next action. That is why monitoring should connect directly to tickets, owners, due dates, and status tracking.",
           "Legal WatchDog is designed around that bridge: source change, AI-assisted summary, ticket, owner, response, and history."
         ]
       },
@@ -339,7 +347,7 @@ export const resourcePosts: ResourcePost[] = [
     intent: "Capture buyers researching regulatory change processes.",
     audience: "Heads of compliance, legal operations, and operations leaders",
     relatedFeature: "Tickets and collaboration",
-    relatedFeatureHref: "/features#collaboration",
+    relatedFeatureHref: "/features/compliance-ticketing",
     summary: "The steps from source tracking to impact review, escalation, ownership, and audit evidence.",
     sections: [
       {
@@ -373,7 +381,7 @@ export const resourcePosts: ResourcePost[] = [
     intent: "Address AI trust, accuracy, and legal review concerns.",
     audience: "Legal teams, compliance leaders, and enterprise buyers",
     relatedFeature: "AI summaries with confidence scores",
-    relatedFeatureHref: "/features#ai-summaries",
+    relatedFeatureHref: "/features/ai-summaries",
     summary: "How AI can reduce reading time while keeping final judgment with qualified professionals.",
     sections: [
       {
@@ -407,7 +415,7 @@ export const resourcePosts: ResourcePost[] = [
     intent: "Educate admins and executives on traceability.",
     audience: "Organization administrators, auditors, and executives",
     relatedFeature: "Team permissions and audit logs",
-    relatedFeatureHref: "/features#security",
+    relatedFeatureHref: "/features/audit-trails",
     summary: "Covers revision history, tickets, comments, approvals, and ownership evidence.",
     sections: [
       {
@@ -441,7 +449,7 @@ export const resourcePosts: ResourcePost[] = [
     intent: "Help teams structure monitoring across countries, regions, and departments.",
     audience: "Compliance project managers and legal operations teams",
     relatedFeature: "Project and jurisdiction management",
-    relatedFeatureHref: "/features#project-jurisdiction",
+    relatedFeatureHref: "/features/source-monitoring",
     summary: "A guide to structuring projects, jurisdictions, sub-jurisdictions, sources, alerts, and owners.",
     sections: [
       {
@@ -475,7 +483,7 @@ export const resourcePosts: ResourcePost[] = [
     intent: "Explain why tickets are central to response accountability.",
     audience: "Operations directors, compliance managers, and legal operations leads",
     relatedFeature: "Ticketing and accountable response",
-    relatedFeatureHref: "/features#collaboration",
+    relatedFeatureHref: "/features/compliance-ticketing",
     summary: "The essentials: context, owner, deadline, discussion, evidence, external specialist access, and final status.",
     sections: [
       {
@@ -510,7 +518,7 @@ export const faqs = [
   },
   {
     q: "How does the platform handle AI accuracy concerns?",
-    a: "The product should keep source context, revision history, diff views, confidence scores, and human review loops visible so teams can verify important updates."
+    a: "Legal WatchDog keeps source context, revision history, diff views, confidence signals, and human review steps visible so teams can verify important updates."
   },
   {
     q: "Can external specialists access the whole workspace?",
@@ -518,15 +526,15 @@ export const faqs = [
   },
   {
     q: "What happens if a website blocks scraping?",
-    a: "Some websites may block scraping. The product should flag failed checks, show source status, and support alternative source handling where possible."
+    a: "Some websites may block scraping. Legal WatchDog flags failed checks, shows source status, and helps teams decide when an alternative source or review path is needed."
   },
   {
     q: "Can teams monitor documents and APIs, not just web pages?",
-    a: "Yes. The PRD direction includes URLs, documents, and APIs as supported source types, with structured and unstructured data handling."
+    a: "Yes. The platform is designed to support URLs, documents, and APIs so teams can monitor structured and unstructured source material."
   },
   {
     q: "Is there a mobile app?",
-    a: "No. The current MVP should be positioned as a web app. The website is responsive, but the product should not promise a native mobile app yet."
+    a: "No. Legal WatchDog is currently positioned as a responsive web app, not a native mobile app."
   },
   {
     q: "Can Legal WatchDog connect to internal dashboards?",
@@ -535,5 +543,170 @@ export const faqs = [
   {
     q: "Who is the best fit for Legal WatchDog?",
     a: "Large enterprises and regulated organizations where compliance failures can create major financial, legal, or operational risk."
+  }
+];
+
+export type FeatureLandingPage = {
+  slug: string;
+  title: string;
+  keyword: string;
+  description: string;
+  problem: string;
+  workflow: string[];
+  buyerValue: string[];
+  faq: { q: string; a: string }[];
+  mockup: "source" | "summary" | "tickets" | "audit" | "jurisdiction" | "overview";
+  useCase: string;
+};
+
+export const featureLandingPages: FeatureLandingPage[] = [
+  {
+    slug: "source-monitoring",
+    title: "Source monitoring for compliance teams",
+    keyword: "source monitoring for compliance teams",
+    description: "Monitor official websites, documents, and APIs by project, jurisdiction, and source owner.",
+    problem: "Compliance teams often depend on scattered source lists and manual checks. That makes coverage hard to prove and failed checks easy to miss.",
+    workflow: ["Create a project", "Add jurisdictions", "Add URLs, documents, or APIs", "Track source status", "Review failed or changed sources"],
+    buyerValue: ["Cleaner source ownership", "Less manual checking", "Better coverage visibility", "Evidence of monitored sources"],
+    faq: [
+      { q: "Can teams add documents and APIs?", a: "Yes. Legal WatchDog is designed to support URLs, documents, and APIs as source types." },
+      { q: "Can the system flag broken sources?", a: "Yes. Source status shows whether a source is active, broken, or recently updated." }
+    ],
+    mockup: "source",
+    useCase: "A travel compliance team can group embassy notices, visa pages, travel advisories, and customer policy documents by destination so coverage is visible before a rule change affects customers."
+  },
+  {
+    slug: "change-detection",
+    title: "Regulatory change detection software",
+    keyword: "regulatory change detection software",
+    description: "Detect updates across monitored sources and preserve revision history for review and audit evidence.",
+    problem: "Manual review forces teams to reread long pages and documents just to find what changed. That slows response and increases missed-update risk.",
+    workflow: ["Run scheduled or manual checks", "Compare old and new content", "Highlight the revision", "Create review context", "Route the update into a ticket"],
+    buyerValue: ["Faster update review", "Visible diff history", "Better audit trail", "Less duplicate research"],
+    faq: [
+      { q: "Can users trigger a manual check?", a: "Yes. Users should be able to run a manual check when they need to confirm the latest source information." },
+      { q: "What if a website blocks scraping?", a: "The platform flags failed checks and shows source status so teams know coverage needs attention." }
+    ],
+    mockup: "jurisdiction",
+    useCase: "A healthcare compliance team can compare an FDA guidance page against the last saved version, then open a review ticket only when a meaningful update appears."
+  },
+  {
+    slug: "ai-summaries",
+    title: "AI compliance summaries with human review",
+    keyword: "AI compliance summaries",
+    description: "Turn long regulatory updates into plain-English summaries while keeping source context and human judgment visible.",
+    problem: "Legal and compliance teams need speed, but they cannot rely on unsupported AI conclusions for important decisions.",
+    workflow: ["Detect the update", "Generate an AI-assisted summary", "Show confidence signals", "Keep source context visible", "Send to a qualified reviewer"],
+    buyerValue: ["Less reading time", "Clearer review context", "Human review remains central", "Better decision traceability"],
+    faq: [
+      { q: "Does AI replace legal review?", a: "No. AI summaries support review. Final legal and compliance decisions remain with qualified professionals." },
+      { q: "How do reviewers verify a summary?", a: "The source, revision history, and detected change stay connected to the summary and ticket." }
+    ],
+    mockup: "summary",
+    useCase: "A legal operations lead can review the summary, see the detected change, check the confidence signal, and send the issue to the right professional for final judgment."
+  },
+  {
+    slug: "compliance-ticketing",
+    title: "Compliance ticketing system for regulatory response",
+    keyword: "compliance ticketing system",
+    description: "Turn detected changes into assigned tickets with owners, due dates, comments, files, and status tracking.",
+    problem: "A detected update does not reduce risk unless someone owns the review and the organization can prove what happened next.",
+    workflow: ["Create a ticket automatically or manually", "Assign an owner", "Add reviewers or specialists", "Track comments and files", "Close with a documented decision"],
+    buyerValue: ["Clear accountability", "Fewer lost updates", "Better cross-team coordination", "Evidence close to the decision"],
+    faq: [
+      { q: "Can tickets be created manually?", a: "Yes. Teams can create manual tickets for issues that are not tied to a detected source change." },
+      { q: "Can external specialists join a ticket?", a: "Yes. They can be invited to a specific ticket without full workspace access." }
+    ],
+    mockup: "tickets",
+    useCase: "An operations director can see which update is open, who owns it, when it is due, and whether legal review or external specialist input is required."
+  },
+  {
+    slug: "audit-trails",
+    title: "Compliance audit trail software for regulatory updates",
+    keyword: "compliance audit trail software",
+    description: "Keep source changes, summaries, tickets, comments, files, assignments, and decisions connected for future review.",
+    problem: "When evidence is spread across emails, chats, files, and memory, teams struggle to prove how they responded to a regulatory update.",
+    workflow: ["Capture the source revision", "Attach the summary", "Record comments and files", "Track assignments and status", "Preserve the final decision"],
+    buyerValue: ["Cleaner evidence", "Better internal review", "Stronger governance", "Reduced rework during audits"],
+    faq: [
+      { q: "What should an audit trail include?", a: "It should include the source, revision, summary, ticket, owner, comments, files, status changes, and final decision." },
+      { q: "Does access control matter for audit readiness?", a: "Yes. Teams need to know who could view, edit, invite, or approve work inside the system." }
+    ],
+    mockup: "audit",
+    useCase: "A compliance administrator can reconstruct who reviewed an update, what evidence they saw, who approved the response, and when the ticket was closed."
+  }
+];
+
+export type IndustryLandingPage = {
+  slug: string;
+  title: string;
+  description: string;
+  sourceTypes: string[];
+  teams: string[];
+  workflow: string[];
+  risksReduced: string[];
+  relatedFeatures: string[];
+};
+
+export const industryLandingPages: IndustryLandingPage[] = [
+  {
+    slug: "travel-immigration-compliance",
+    title: "Travel and immigration compliance monitoring",
+    description: "Monitor visa rules, entry policies, customer guidance, embassy updates, and immigration notices across priority destinations.",
+    sourceTypes: ["Immigration authority pages", "Visa guidance pages", "Embassy notices", "Travel advisories", "Customer policy documents"],
+    teams: ["Compliance", "Operations", "Customer guidance", "Legal reviewers"],
+    workflow: ["Group destinations by jurisdiction", "Monitor official sources", "Detect policy changes", "Create a review ticket", "Update customer guidance"],
+    risksReduced: ["Outdated customer guidance", "Missed visa rule changes", "Late operational response"],
+    relatedFeatures: ["Source monitoring", "Change detection", "Ticketing"]
+  },
+  {
+    slug: "healthcare-pharma-compliance",
+    title: "Healthcare and pharma regulatory monitoring",
+    description: "Track FDA updates, GMP guidance, recalls, device classifications, public health notices, and process obligations.",
+    sourceTypes: ["FDA pages", "Recall notices", "GMP guidance", "Device classification updates", "Public health sources"],
+    teams: ["Compliance", "Quality", "Legal", "Regulatory affairs"],
+    workflow: ["Create a regulated product project", "Add FDA and quality sources", "Detect revisions", "Summarize potential impact", "Assign review and follow-up"],
+    risksReduced: ["Slow guidance review", "Poor evidence history", "Delayed quality follow-up"],
+    relatedFeatures: ["AI summaries", "Audit trails", "Ticketing"]
+  },
+  {
+    slug: "finance-banking-compliance",
+    title: "Finance and banking regulatory monitoring",
+    description: "Track supervisory notices, reporting rules, consumer protection updates, risk guidance, and multi-market obligations.",
+    sourceTypes: ["Central bank notices", "Regulator circulars", "Risk guidance", "Reporting rule pages", "Consumer protection updates"],
+    teams: ["Compliance", "Legal", "Risk", "Operations"],
+    workflow: ["Map markets by jurisdiction", "Monitor official notices", "Detect rule changes", "Route review to risk owners", "Document decisions"],
+    risksReduced: ["Missed supervisory notices", "Unclear risk ownership", "Weak review documentation"],
+    relatedFeatures: ["Change detection", "Audit trails", "API access"]
+  },
+  {
+    slug: "technology-privacy-compliance",
+    title: "Technology and privacy law monitoring",
+    description: "Monitor GDPR, CCPA, UK DPA, Singapore PDPA, AI data guidance, privacy notices, and product-impacting obligations.",
+    sourceTypes: ["Privacy regulator guidance", "AI data processing guidance", "Legal updates", "Policy notices", "Product compliance documents"],
+    teams: ["Legal", "Privacy", "Product", "Security", "Operations"],
+    workflow: ["Create a privacy project", "Separate jurisdictions", "Monitor guidance sources", "Summarize impact", "Assign legal and product review"],
+    risksReduced: ["Late privacy policy changes", "Product teams missing legal updates", "Scattered privacy review evidence"],
+    relatedFeatures: ["AI summaries", "Jurisdiction management", "Ticketing"]
+  },
+  {
+    slug: "oil-gas-compliance",
+    title: "Oil and gas regulatory monitoring",
+    description: "Keep environmental, safety, operational, licensing, and contract-related regulatory changes visible across teams.",
+    sourceTypes: ["Safety notices", "Environmental updates", "Licensing rules", "Operational guidance", "Contract-related regulations"],
+    teams: ["Legal", "Compliance", "Operations", "Field supervisors"],
+    workflow: ["Group sources by operating area", "Detect high-risk updates", "Assign operational owners", "Escalate overdue tickets", "Preserve evidence"],
+    risksReduced: ["Late safety response", "Unclear field ownership", "Lost approval evidence"],
+    relatedFeatures: ["Notifications", "Audit trails", "Ticketing"]
+  },
+  {
+    slug: "logistics-compliance",
+    title: "Logistics and transport compliance monitoring",
+    description: "Watch customs rules, transport notices, port policies, safety rules, and cross-border operational updates.",
+    sourceTypes: ["Customs notices", "Port authority updates", "Transport regulations", "Safety guidance", "Cross-border policy pages"],
+    teams: ["Operations", "Compliance", "Legal", "Dispatch managers"],
+    workflow: ["Map routes and jurisdictions", "Monitor port and transport sources", "Detect updates", "Assign operational response", "Track completion"],
+    risksReduced: ["Port policy surprises", "Delayed dispatch changes", "Poor cross-border update tracking"],
+    relatedFeatures: ["Source monitoring", "Change detection", "Notifications"]
   }
 ];

@@ -56,8 +56,8 @@ export default async function ResourceArticlePage({ params }: { params: Promise<
           <h1>{post.title}</h1>
           <p>{post.summary}</p>
           <div className="article-meta">
-            <span>Keyword: {post.keyword}</span>
-            <span>Audience: {post.audience}</span>
+            <span>5 min read</span>
+            <span>For {post.audience}</span>
           </div>
           <div className="hero-actions">
             <ButtonLink href="/contact" trackingId={`article-demo:${post.slug}`}>Book a Demo</ButtonLink>

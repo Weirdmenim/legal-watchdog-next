@@ -16,10 +16,10 @@ const principles = [
 ];
 
 const boundaries = [
-  "Legal WatchDog is built for enterprise organizations, not everyday users or small businesses.",
-  "The current product direction is web app first. Do not promise a native mobile app in the MVP.",
+  "Legal WatchDog is built for enterprise organizations and regulated teams with serious monitoring responsibilities.",
+  "Legal WatchDog is currently positioned as a responsive web app, not a native mobile app.",
   "AI summaries are review support, not legal advice.",
-  "Some websites may block scraping, so failed checks and source status must be visible.",
+  "Some websites may block scraping, so failed checks and source status remain visible to the team.",
   "External specialists should only access the tickets they were invited to review."
 ];
 
@@ -71,7 +71,7 @@ export default function AboutPage() {
       </section>
 
       <section className="section-shell dark-panel">
-        <SectionHeading eyebrow="MVP boundaries" title="Trust improves when the website avoids overpromising." />
+        <SectionHeading eyebrow="Responsible product boundaries" title="Trust improves when the product is clear about what it does and does not do." />
         <div className="card-grid two">
           {boundaries.map((item) => <article className="dark-card" key={item}><h3>{item}</h3></article>)}
         </div>

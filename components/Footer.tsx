@@ -5,13 +5,14 @@ const productLinks = [
   { label: "Features", href: "/features" },
   { label: "Industries", href: "/industries" },
   { label: "Pricing", href: "/pricing" },
-  { label: "Case Studies", href: "/case-studies" }
+  { label: "Use Cases", href: "/use-cases" }
 ];
 
 const companyLinks = [
   { label: "About", href: "/about" },
   { label: "Resources", href: "/resources" },
   { label: "Checklist", href: "/compliance-monitoring-checklist" },
+  { label: "Security", href: "/security" },
   { label: "Contact", href: "/contact" }
 ];
 
@@ -59,7 +60,7 @@ export function Footer() {
       </div>
       <div className="footer-bottom">
         <span>© {new Date().getFullYear()} Legal WatchDog. All rights reserved.</span>
-        <span>Privacy • Terms • Security placeholders</span>
+        <span><Link href="/security">Security</Link> • Privacy • Terms</span>
       </div>
     </footer>
   );

@@ -4,7 +4,7 @@ const trustItems = [
   "Source change detection",
   "Ticket-based accountability",
   "Human review built in",
-  "No fake legal advice claims"
+  "AI supports review, not legal advice"
 ];
 
 export function TrustBar() {

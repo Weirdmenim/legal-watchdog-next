@@ -19,9 +19,9 @@ export default function ContactPage() {
       <JsonLd data={breadcrumbSchema([{ label: "Home", href: "/" }, { label: "Contact", href: "/contact" }])} />
       <section className="page-hero section-shell">
         <p className="eyebrow">Book a demo</p>
-        <h1>Show us what your team monitors. We will show you how Legal WatchDog structures the workflow.</h1>
+        <h1>Book a demo for your regulatory monitoring workflow.</h1>
         <p>
-          Share your industry, jurisdictions, source types, and current compliance challenge. This form is ready to connect to your CRM or email tool.
+          Share your industry, jurisdictions, source types, and current compliance challenge. The demo will focus on one workflow your team handles today.
         </p>
       </section>
 
@@ -41,7 +41,7 @@ export default function ContactPage() {
       </section>
 
       <section className="section-shell light-panel">
-        <SectionHeading eyebrow="Alternative contact paths" title="Route each lead to the right next step." align="center" />
+        <SectionHeading eyebrow="Alternative contact paths" title="Choose the right conversation for your team." align="center" />
         <div className="card-grid three">
           <article className="info-card"><h2>Sales enquiry</h2><p>For pricing, procurement, enterprise packaging, or contract questions.</p></article>
           <article className="info-card"><h2>Security review</h2><p>For audit logs, encryption, access control, external invite, and data-handling questions.</p></article>

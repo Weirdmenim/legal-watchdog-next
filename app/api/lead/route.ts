@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Production note:
-    // Replace this placeholder with HubSpot, Brevo, Airtable, Salesforce, Resend, or a backend endpoint.
+    // Connect this route to HubSpot, Brevo, Airtable, Salesforce, Resend, or your backend endpoint.
     // Avoid logging sensitive lead data in production.
     const acceptedLead = {
       mode,

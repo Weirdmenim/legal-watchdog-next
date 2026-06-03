@@ -1,39 +1,21 @@
-# Legal WatchDog Implementation Summary
+# Legal WatchDog v5 Implementation Summary
 
-## What was built
+## Main improvements
 
-A deployable Next.js website for Legal WatchDog, improved using the same growth, SEO, conversion, accessibility, internal-linking, and testing approach used for the Gomentum website work.
+- Upgraded site typography direction to IBM Plex Sans for a more mature enterprise SaaS feel.
+- Improved body, muted, card, link, dark-section, and form text colors for better readability.
+- Added realistic product mockup components for source monitoring, AI summaries, ticket workflow, audit trail, jurisdiction coverage, and command centre preview.
+- Added a dedicated `/security` page for enterprise trust, access control, audit trail, AI boundaries, and source reliability concerns.
+- Improved the homepage hero and added stronger product preview sections.
+- Improved feature landing pages with product mockups, buyer use cases, trust boundaries, FAQs, and CTAs.
+- Improved industry landing pages with risks reduced, source types, teams involved, workflows, related capabilities, and CTAs.
+- Improved Open Graph/social preview metadata with a generated OG SVG asset.
+- Updated sitemap and smoke tests to include the security page and new product components.
 
-## Core pages
+## Safety notes
 
-1. Home
-2. About
-3. Features
-4. Industries
-5. Pricing
-6. Case Studies
-7. Resources
-8. Contact
+The upgrade keeps the existing Next.js App Router structure and does not remove working core routes. `/case-studies` remains a redirect to `/use-cases` so old links do not break.
 
-## Extra pages added
+## MVP boundary preserved
 
-1. Compliance Monitoring Checklist lead magnet page
-2. Six SEO resource/article pages
-
-## Main user journeys
-
-1. High-intent buyer: Home → Features → Pricing → Contact
-2. Industry buyer: Home → Industries → Case Studies → Contact
-3. SEO visitor: Resource article → Related feature → Checklist or Demo
-4. Early-stage lead: Resources → Checklist → Resource form
-5. Enterprise evaluator: About → Features → Security/Audit section → Contact
-
-## MVP boundaries respected
-
-- No native mobile app promise.
-- No fake customer testimonials.
-- No fake security certification.
-- No exact pricing invented.
-- No claim that AI provides legal advice.
-- External specialists are positioned as ticket-only invitees.
-- Advanced analytics and full specialist marketplace are not promised as MVP features.
+The copy still avoids claiming that Legal WatchDog gives legal advice, replaces legal professionals, has a native mobile app, or has fake customer proof.

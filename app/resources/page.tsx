@@ -13,22 +13,22 @@ export default function ResourcesPage() {
     <>
       <JsonLd data={breadcrumbSchema([{ label: "Home", href: "/" }, { label: "Resources", href: "/resources" }])} />
       <section className="page-hero section-shell">
-        <p className="eyebrow">Resources and blog</p>
-        <h1>Practical guides for regulatory monitoring, compliance workflows, AI summaries, and audit readiness.</h1>
+        <p className="eyebrow">Resources</p>
+        <h1>Compliance operations resources for enterprise teams.</h1>
         <p>
-          This Resources section is built for SEO and conversion. Each guide targets a clear keyword, answers a buyer question, links to product pages, and gives readers a next step.
+          Practical guides on regulatory monitoring, change management, AI-assisted review, audit trails, and accountable response workflows.
         </p>
       </section>
 
       <section className="section-shell">
-        <SectionHeading eyebrow="Blog categories" title="Build topical authority around the buyer's real problems." />
+        <SectionHeading eyebrow="Topics" title="Explore the problems enterprise compliance teams deal with every week." />
         <div className="tag-row">
           {resourceCategories.map((category) => <span key={category}>{category}</span>)}
         </div>
       </section>
 
       <section className="section-shell light-panel">
-        <SectionHeading eyebrow="Published guide set" title="SEO-focused articles included in this build." text="These are real, clickable resource pages, not only a blog idea list." align="center" />
+        <SectionHeading eyebrow="Guides" title="Read practical guides, then map the workflow to your team." text="Each article is written for buyers and practitioners who need a clearer way to monitor sources, review changes, and document action." align="center" />
         <div className="card-grid two">
           {resourcePosts.map((post) => <ArticleCard key={post.slug} post={post} />)}
         </div>
@@ -36,14 +36,14 @@ export default function ResourcesPage() {
 
       <section className="section-shell split-section" id="download-checklist">
         <div>
-          <p className="eyebrow">Lead magnet</p>
+          <p className="eyebrow">Checklist</p>
           <h2>Download the Compliance Monitoring Checklist.</h2>
-          <p>Use this gated resource flow to capture early-stage buyers who are not ready for a demo yet. Connect it to Brevo, HubSpot, Airtable, or your CRM before launch.</p>
+          <p>Use the checklist to list your sources, jurisdictions, reviewers, alert rules, ticket owners, and evidence gaps before you evaluate software.</p>
         </div>
         <LeadForm mode="resource" />
       </section>
 
-      <CTASection title="Turn resource readers into qualified demo leads." text="Use article CTAs to move readers from education into source mapping, jurisdiction planning, and demo booking." />
+      <CTASection title="Need help mapping your regulatory monitoring workflow?" text="Book a demo and use one real workflow to review sources, jurisdictions, AI summaries, tickets, and audit evidence." />
     </>
   );
 }
