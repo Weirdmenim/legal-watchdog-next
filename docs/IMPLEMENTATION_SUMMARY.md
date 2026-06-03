@@ -1,25 +1,20 @@
-# Legal WatchDog v6 Implementation Summary
+# Legal WatchDog v7 Implementation Summary
 
-## Version direction
-v6 is the quieter executive-clean version of the Legal WatchDog website. The goal was to reduce cognitive load without breaking the working Next.js implementation.
+## Main improvement
+The navbar has been upgraded from a flat, crowded navigation into a fixed, grouped enterprise SaaS navigation system.
 
-## Naming preserved
-- Project folder: `legal-watchdog-next`
-- Package name: `legal-watchdog-next`
-- Core public routes remain available.
-- `/case-studies` continues to redirect to `/use-cases`.
+## What changed
+- Fixed desktop navbar.
+- Cleaner top-level navigation: Product, Industries, Resources, Pricing, Security, Book a Demo.
+- Dropdowns for Product, Industries, and Resources.
+- Mobile menu with grouped navigation and a clear Book a Demo CTA.
+- Active page states for current sections.
+- Stronger hover and focus styles.
+- Better tap targets for mobile.
+- Same internal project folder name retained: `legal-watchdog-next`.
 
-## Main changes
-- Homepage was shortened into a focused buyer journey:
-  1. Hero
-  2. Trust signals
-  3. Problem
-  4. Product workflow
-  5. Command centre preview
-  6. Who it helps
-  7. Enterprise trust
-  8. Demo CTA
-- Heavy homepage sections were moved to deeper pages rather than removed.
-- Top navigation was simplified.
-- Styling was tuned for calmer visual hierarchy and reduced noise.
-- Existing feature, industry, pricing, security, resources, use cases, checklist, contact, sitemap, robots, and API routes were preserved.
+## Preserved behavior
+- Existing pages and URLs remain available.
+- `/case-studies` continues redirecting to `/use-cases`.
+- Sitemap, robots, API route, and existing SEO landing pages remain intact.
+- The site still follows the PRD boundary: no fake customer proof, no AI-as-lawyer claim, and no native mobile app promise.

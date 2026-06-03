@@ -1,45 +1,50 @@
-# Legal WatchDog v6 QA Report
+# Legal WatchDog v7 Navigation QA Report
 
 ## Scope
-This v6 build keeps the same project/package naming (`legal-watchdog-next`) and preserves the existing routes while simplifying the homepage, reducing navigation noise, and moving detail into the feature, industry, security, use case, and resource pages.
+This version improves the v6 quiet site by fixing the desktop navbar behavior and simplifying navigation without changing the working route structure.
 
-## Improvements applied
-- Reduced homepage sections into a cleaner executive summary.
-- Removed homepage detail overload: no long industry grid, use case grid, or full FAQ block on the homepage.
-- Kept deeper content available on existing pages instead of deleting it.
-- Simplified top navigation to Features, Industries, Resources, Pricing, Security, and Book a Demo.
-- Preserved `/case-studies` as a redirect to `/use-cases`.
-- Preserved IBM Plex Sans and improved quiet visual hierarchy with calmer backgrounds, fewer card-heavy sections, and softer shadows.
-- Kept PRD boundaries: no fake customer proof, no legal-advice claim, and no mobile-app promise.
+## Navigation changes
+- Desktop header is now fixed at the top of the viewport.
+- Top-level navigation is grouped into Product, Industries, Resources, Pricing, Security, and Book a Demo.
+- Product, Industries, and Resources now expose focused dropdown menus.
+- Checklist is moved under Resources instead of competing with the primary demo CTA.
+- Contact remains available through Book a Demo and footer navigation.
+- Mobile navigation uses a clean menu with grouped sections and a persistent Book a Demo action.
+- Existing routes are preserved, including `/case-studies` redirecting to `/use-cases`.
 
-## Commands run
+## Test commands run
 ```bash
 npm install --ignore-scripts
 npm run typecheck
 npm run test:smoke
 NEXT_TELEMETRY_DISABLED=1 npm run build
-npm run start
+npm run start -- -p 3001
 ```
 
 ## Production route checks
-```text
-200 /
-200 /about
-200 /features
-200 /features/source-monitoring
-200 /industries
-200 /pricing
-200 /security
-200 /use-cases
-307 /case-studies
-200 /resources
-200 /compliance-monitoring-checklist
-200 /contact
-200 /sitemap.xml
-200 /robots.txt
-200 /api/lead POST
-```
+The following routes returned 200 OK during local production-server testing:
+
+- `/`
+- `/features`
+- `/features/source-monitoring`
+- `/features/change-detection`
+- `/features/ai-summaries`
+- `/features/compliance-ticketing`
+- `/features/audit-trails`
+- `/industries`
+- `/industries/travel-immigration-compliance`
+- `/industries/healthcare-pharma-compliance`
+- `/pricing`
+- `/security`
+- `/use-cases`
+- `/resources`
+- `/compliance-monitoring-checklist`
+- `/contact`
+- `/sitemap.xml`
+- `/robots.txt`
+- `/api/lead` POST
+
+`/case-studies` correctly resolves to `/use-cases`.
 
 ## Notes
-- The form API captures and validates demo requests in the app response, but it is not yet connected to a CRM, Brevo, HubSpot, Airtable, email delivery, or database.
-- Run Lighthouse and WAVE again after deployment on Vercel, because live production checks can differ from local build checks.
+Final Lighthouse and WAVE checks should still be run against the deployed Vercel URL after publishing, because production hosting, network conditions, and browser rendering can affect performance and accessibility scores.
